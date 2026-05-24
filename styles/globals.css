@@ -1,0 +1,69 @@
+/* ── fonts ───────────────────────────────────────────────────────────────────*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap');
+
+/* ── design tokens (light mode) ──────────────────────────────────────────────*/
+:root {
+  --font-sans:  'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+  --font-mono:  'Fira Code', 'Cascadia Code', monospace;
+
+  --color-background-primary:   #ffffff;
+  --color-background-secondary: #f4f2ed;
+  --color-background-tertiary:  #f7f5f0;
+  --color-background-info:      #e8f0fb;
+  --color-background-warning:   #fff3e0;
+  --color-background-danger:    #fde8e8;
+  --color-background-success:   #e8f3ed;
+
+  --color-text-primary:   #1a1a18;
+  --color-text-secondary: #55524e;
+  --color-text-tertiary:  #88857f;
+  --color-text-info:      #1e5fa8;
+  --color-text-warning:   #b56b00;
+  --color-text-danger:    #b53030;
+  --color-text-success:   #2a6e4e;
+
+  --color-border-tertiary:  rgba(26, 26, 24, 0.12);
+  --color-border-secondary: rgba(26, 26, 24, 0.22);
+  --color-border-primary:   rgba(26, 26, 24, 0.38);
+
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+}
+
+/* ── dark mode overrides ─────────────────────────────────────────────────────*/
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background-primary:   #1e1e1c;
+    --color-background-secondary: #252522;
+    --color-background-tertiary:  #161614;
+    --color-background-info:      #0c2240;
+    --color-background-warning:   #2a1f00;
+    --color-background-danger:    #2a0808;
+    --color-background-success:   #061a10;
+
+    --color-text-primary:   #f0ede8;
+    --color-text-secondary: #a8a49e;
+    --color-text-tertiary:  #6a6762;
+    --color-text-info:      #85b7eb;
+    --color-text-warning:   #fac775;
+    --color-text-danger:    #f09595;
+    --color-text-success:   #5dcaa5;
+
+    --color-border-tertiary:  rgba(240, 237, 232, 0.10);
+    --color-border-secondary: rgba(240, 237, 232, 0.18);
+    --color-border-primary:   rgba(240, 237, 232, 0.30);
+  }
+}
+
+/* ── base reset ──────────────────────────────────────────────────────────────*/
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  font-family: var(--font-sans);
+  background:  var(--color-background-tertiary);
+  color:       var(--color-text-primary);
+  -webkit-font-smoothing:  antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
